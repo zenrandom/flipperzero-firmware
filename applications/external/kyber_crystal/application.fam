@@ -1,0 +1,17 @@
+App(
+    appid="kyber_crystal",
+    name="Kyber Crystal",
+    apptype=FlipperAppType.EXTERNAL,
+    targets=["f7"],
+    entry_point="kyber_crystal_app",
+    requires=[
+        "gui",
+        "storage",
+    ],
+    stack_size=4 * 1024,
+    fap_icon="assets/Nfc_10px.png",
+    fap_category="NFC",
+    fap_version="1.0.0",
+    fap_author="Claude",
+    fap_description="Read and emulate Savi's Workshop Kyber Crystal NFC cards (all 16 sectors)",
+)
