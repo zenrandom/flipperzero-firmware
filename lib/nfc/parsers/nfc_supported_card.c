@@ -6,6 +6,7 @@
 #include "troika_4k_parser.h"
 #include "two_cities.h"
 #include "all_in_one.h"
+#include "kyber_crystal_parser.h"
 
 NfcSupportedCard nfc_supported_card[NfcSupportedCardTypeEnd] = {
     [NfcSupportedCardTypePlantain] =
@@ -49,6 +50,13 @@ NfcSupportedCard nfc_supported_card[NfcSupportedCardTypeEnd] = {
             .verify = all_in_one_parser_verify,
             .read = all_in_one_parser_read,
             .parse = all_in_one_parser_parse,
+        },
+    [NfcSupportedCardTypeKyberCrystal] =
+        {
+            .protocol = NfcDeviceProtocolMifareClassic,
+            .verify = kyber_crystal_parser_verify,
+            .read = kyber_crystal_parser_read,
+            .parse = kyber_crystal_parser_parse,
         },
 };
 
